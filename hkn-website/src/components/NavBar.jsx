@@ -38,14 +38,6 @@ function NavBar() {
             >
               Honors Career Fair
             </Link>
-            <Link
-              to="/sponsor"
-              className={`${
-                location.pathname === '/sponsor' ? '[color:#5F69A6]' : textColorClass
-              } ${hoverColorClass}`}
-            >
-              Sponsor
-            </Link>
             <a href="#contact" className={`${textColorClass} ${hoverColorClass}`}>
               Contact
             </a>

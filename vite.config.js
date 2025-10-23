@@ -1,14 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler']],
-      },
-    }),
-  ],
-  base: '/website/', 
+  plugins: [react()],
+  base: '/website/',  // <-- IMPORTANT for GitHub Pages under org/project
 })

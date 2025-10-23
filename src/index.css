@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Book Antiqua";
+    src: url("./assets/fonts/book-antiqua/bookantiqua.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Book Antiqua";
+    src: url("./assets/fonts/book-antiqua/bookantiqua_bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+

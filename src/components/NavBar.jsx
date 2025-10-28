@@ -38,9 +38,22 @@ function NavBar() {
             >
               Honors Career Fair
             </Link>
-            <a href="#contact" className={`${textColorClass} ${hoverColorClass}`}>
-              Contact
-            </a>
+            <Link
+              to="https://hknucsd-outreach.org/#/"
+              className={`${
+                location.pathname === '/career-fair' ? '[color:#A3D7E5]' : textColorClass
+              } ${hoverColorClass}`}
+            >
+              Outreach
+            </Link>
+            <Link
+              to="https://portal.hknucsd.com/"
+              className={`${
+                location.pathname === '/career-fair' ? '[color:#A3D7E5]' : textColorClass
+              } ${hoverColorClass}`}
+            >
+              Portal
+            </Link>
           </div>
         </div>
       </div>

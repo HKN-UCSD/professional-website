@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import NavBar from '../components/NavBar';
 import './CareerFair.css';
 import hcfBanner from '../media/images/hcf/hcf-banner-backgroundless.png';
-import hcfBackground from '../media/images/hcf/hcf-background.png';
 import hknLogo from '../media/images/hcf/hkn-logo.png';
 import tbpLogo from '../media/images/hcf/tbp-logo.png';
 import scholarsLogo from '../media/images/hcf/scholars-logo.png';

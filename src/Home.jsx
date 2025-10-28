@@ -5,8 +5,9 @@ import './Home.css';
 function Home() {
   return (
     <div className="page-container">
-      <NavBar />
-
+      <div className="transparent-nav">
+        <NavBar />
+      </div>
       <header className="header">
         <div className="container mx-auto px-6 md:px-10 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">

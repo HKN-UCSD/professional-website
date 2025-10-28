@@ -10,7 +10,7 @@ function NavBar() {
   const hoverColorClass = isCareerFairPage ? 'hover:text-[#A3D7E5]' : 'hover:text-[#5F69A6]';
   
   return (
-    <nav className={`bg-transparent ${isCareerFairPage}`}>
+    <nav className="fixed top-0 inset-x-0 z-[1000] backdrop-blur-md bg-[rgba(17,25,40,0.25)] saturate-150">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -38,22 +38,14 @@ function NavBar() {
             >
               Honors Career Fair
             </Link>
-            <Link
-              to="https://hknucsd-outreach.org/#/"
-              className={`${
-                location.pathname === '/career-fair' ? '[color:#A3D7E5]' : textColorClass
-              } ${hoverColorClass}`}
-            >
-              Outreach
-            </Link>
-            <Link
-              to="https://portal.hknucsd.com/"
-              className={`${
-                location.pathname === '/career-fair' ? '[color:#A3D7E5]' : textColorClass
-              } ${hoverColorClass}`}
+            <a
+              href="https://portal.hknucsd.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${textColorClass} ${hoverColorClass}`}
             >
               Portal
-            </Link>
+            </a>
           </div>
         </div>
       </div>

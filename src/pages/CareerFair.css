@@ -41,20 +41,6 @@ body {
     align-items: center;
 }
 
-/* Make navbar transparent on this page */
-.transparent-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.transparent-nav nav {
-    background-color: transparent !important;
-    backdrop-filter: blur(5px);
-    box-shadow: none !important;
-}
 
 /* Banner Animation Keyframes */
 @keyframes bannerFadeInForward {

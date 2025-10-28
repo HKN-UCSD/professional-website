@@ -127,11 +127,9 @@ function CareerFair() {
   }, []);
 
   return (
-    <div className="career-fair-container">
-      <div className="transparent-nav">
-        <NavBar />
-      </div>
-      
+    <>
+    <NavBar />
+    <div className="career-fair-container">   
       <div id="cover-page" className="content-section">
         <div id="cover-flex">
           <div>
@@ -233,7 +231,7 @@ function CareerFair() {
             <div className="faq-card-inner">
               <div className="faq-card-front">
                 <h3>Why should I attend HCF?</h3>
-                <span className="faq-click-hint">Click to flip</span>
+                <span className="faq-click-hint">⟲</span>
               </div>
               <div className="faq-card-back">
                 <p>HCF gives honors students a private space to connect with companies, increasing their visibility in the job market. Recruiters also recognize their honors status, adding credibility to attendees.</p>
@@ -245,7 +243,7 @@ function CareerFair() {
             <div className="faq-card-inner">
               <div className="faq-card-front">
                 <h3>Do I have to stay for the entire event?</h3>
-                <span className="faq-click-hint">Click to flip</span>
+                <span className="faq-click-hint">⟲</span>
               </div>
               <div className="faq-card-back">
                 <p>No! Since the event will run from 1 to 5pm, you can join in at any time to participate in the event.</p>
@@ -257,7 +255,7 @@ function CareerFair() {
             <div className="faq-card-inner">
               <div className="faq-card-front">
                 <h3>Which companies will be attending?</h3>
-                <span className="faq-click-hint">Click to flip</span>
+                <span className="faq-click-hint">⟲</span>
               </div>
               <div className="faq-card-back">
                 <p>This year the companies attending include: Lawrence Livermore National Laboratory (LLNL), Viasat, Interlink, and Arkus.</p>
@@ -269,7 +267,7 @@ function CareerFair() {
             <div className="faq-card-inner">
               <div className="faq-card-front">
                 <h3>What is the dress code?</h3>
-                <span className="faq-click-hint">Click to flip</span>
+                <span className="faq-click-hint">⟲</span>
               </div>
               <div className="faq-card-back">
                 <p>This is a business-casual event, so make sure to dress as you would to an interview.</p>
@@ -281,7 +279,7 @@ function CareerFair() {
             <div className="faq-card-inner">
               <div className="faq-card-front">
                 <h3>What should I bring?</h3>
-                <span className="faq-click-hint">Click to flip</span>
+                <span className="faq-click-hint">⟲</span>
               </div>
               <div className="faq-card-back">
                 <p>Make sure to bring multiple hard copies of your resume to hand out to company representatives.</p>
@@ -293,7 +291,7 @@ function CareerFair() {
             <div className="faq-card-inner">
               <div className="faq-card-front">
                 <h3>I have a question, who do I contact?</h3>
-                <span className="faq-click-hint">Click to flip</span>
+                <span className="faq-click-hint">⟲</span>
               </div>
               <div className="faq-card-back">
                 <p>Contact Nian Nian Wang at <a href="mailto:niw002@ucsd.edu">niw002@ucsd.edu</a></p>
@@ -303,6 +301,7 @@ function CareerFair() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

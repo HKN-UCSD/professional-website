@@ -45,21 +45,49 @@ function CareerFair() {
       }, 500 + (index * 200)); // Staggered start for organization logos
     });
     
-    // Sponsor logos - just add idle twinkling immediately 
-    const sponsorLogos = document.querySelectorAll('.sponsor-logo');
-    const featuredLogo = document.querySelector('.featured-sponsor-logo');
-    
-    // Add idle twinkling to all sponsor logos immediately
-    sponsorLogos.forEach((logo, index) => {
-      setTimeout(() => {
-        logo.classList.add('idle');
-      }, 500 + (index * 100)); // Small staggered delay for twinkling start
+    // Sponsor logos - will be animated when sponsors section comes into view
+    // (Animation setup is handled by the sponsors observer below)
+
+    // Sponsors section animation observer
+    const sponsorsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sponsorLogos = document.querySelectorAll('.sponsor-logo');
+          const featuredLogo = document.querySelector('.featured-sponsor-logo');
+          
+          // Animate featured logo first
+          if (featuredLogo) {
+            featuredLogo.classList.add('animate');
+            // Add idle twinkling after animation completes
+            setTimeout(() => {
+              featuredLogo.classList.add('idle');
+            }, 700); // Wait for slide-up animation to complete
+          }
+          
+          // Animate sponsor logos with staggered delay
+          sponsorLogos.forEach((logo, index) => {
+            setTimeout(() => {
+              logo.classList.add('animate');
+              // Add idle twinkling after animation completes
+              setTimeout(() => {
+                logo.classList.add('idle');
+              }, 700); // Wait for slide-up animation to complete
+            }, (index + 1) * 150); // 150ms delay between each logo, starting after featured
+          });
+          
+          // Unobserve after animation triggers
+          sponsorsObserver.disconnect();
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px' // Trigger slightly before element fully enters viewport
     });
     
-    if (featuredLogo) {
-      setTimeout(() => {
-        featuredLogo.classList.add('idle');
-      }, 300); // Featured logo starts twinkling slightly earlier
+    // Observe sponsors section
+    const sponsorsSection = document.querySelector('#sponsors');
+    if (sponsorsSection) {
+      sponsorsObserver.observe(sponsorsSection);
     }
 
     // FAQ cards animation
@@ -91,23 +119,15 @@ function CareerFair() {
     }
     
     function startTypewriter(element, text) {
-      // Split text into words and identify the last few impactful words
-      const words = text.split(' ');
-      const wordsToType = 6; // Number of words to animate
-      const staticWords = words.slice(0, -wordsToType).join(' ');
-      const animatedWords = words.slice(-wordsToType).join(' ');
-      
-      // Set up the static text immediately
-      element.innerHTML = staticWords + ' <span class="typewriter-text"></span>';
+      element.innerHTML = '<span class="typewriter-text"></span>';
       const typewriterSpan = element.querySelector('.typewriter-text');
       
       element.classList.add('typing');
       
-      // Type out only the last few words character by character
       let i = 0;
       const typeInterval = setInterval(() => {
-        if (i < animatedWords.length) {
-          typewriterSpan.textContent += animatedWords.charAt(i);
+        if (i < text.length) {
+          typewriterSpan.textContent += text.charAt(i);
           i++;
         } else {
           // Animation complete
@@ -117,12 +137,13 @@ function CareerFair() {
           // Replace with normal text
           element.textContent = text;
         }
-      }, 10); // 10ms per character for very fast typing
+      }, 4); // 8ms per character for faster typing speed
     }
     
     // Cleanup function
     return () => {
       aboutObserver.disconnect();
+      sponsorsObserver.disconnect();
     };
   }, []);
 

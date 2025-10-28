@@ -12,6 +12,7 @@
     --rsvp-animation-duration: 0.56s;
     --rsvp-animation-delay: 1.75s;
     --faq-card-duration: 0.8s;
+    --sponsor-logo-duration: 0.7s;
 }
 
 html {
@@ -184,6 +185,8 @@ body {
     width: 200px;
     height: 120px;
     filter: var(--glow-small);
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 /* Featured sponsor logo */
@@ -191,11 +194,34 @@ body {
     width: 300px;
     height: 180px;
     filter: var(--glow-large);
+    opacity: 0;
+    transform: translateY(30px);
 }
 
-/* Animation triggers - just idle twinkling */
+/* Sponsor logo animation triggers */
+.sponsor-logo.animate {
+    animation: slideUpFadeIn var(--sponsor-logo-duration) ease-out forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.featured-sponsor-logo.animate {
+    animation: slideUpFadeIn var(--sponsor-logo-duration) ease-out forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation triggers - idle twinkling after slide-up completes */
 .sponsor-logo.idle {
     animation: sponsorTwinkle 3s ease-in-out infinite;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.featured-sponsor-logo.idle {
+    animation: featuredTwinkle 2.5s ease-in-out infinite;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .featured-sponsor-logo.idle {
@@ -332,9 +358,7 @@ body {
 
 /* Triggered when in view */
 .about-text.typing {
-    animation: 
-        typewriter 3s steps(200) 0.5s forwards,
-        blinkCursor 0.8s infinite;
+    animation: blinkCursor 0.8s infinite;
 }
 
 .about-text.typing-complete {

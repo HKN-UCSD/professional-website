@@ -10,7 +10,7 @@ function NavBar() {
   const hoverColorClass = isCareerFairPage ? 'hover:text-[#A3D7E5]' : 'hover:text-[#5F69A6]';
   
   return (
-    <nav className="fixed top-0 inset-x-0 z-[1000] backdrop-blur-md bg-[rgba(17,25,40,0.25)] saturate-150">
+    <nav className="fixed top-0 inset-x-0 z-[1000] backdrop-blur-xl bg-[rgba(17,25,40,0.25)] saturate-150">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

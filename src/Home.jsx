@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar';
+import Slideshow from './components/Slideshow';
+import Carousel from './components/Carousel';
 import './Home.css';
 
 function Home() {
@@ -135,6 +137,19 @@ function Home() {
           <div className="w-full h-0.5 bg-blue-400 mt-8"></div>
         </section>
 
+      </main>
+
+      <main className="container mx-auto px-6 md:px-10 py-16">
+        <section className="max-w-4xl text-center mx-auto">
+          <h2 className="text-3xl font-bold text-blue-400 mb-6">WHERE WE ARE</h2>
+          <Slideshow />
+        </section>
+      </main>
+
+      <main className="container mx-auto px-6 md:px-10 py-16">
+        <section className="max-w-4xl text-center mx-auto">
+          <Carousel />
+        </section>
       </main>
 
     </div>

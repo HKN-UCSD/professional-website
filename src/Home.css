@@ -7,17 +7,95 @@
     overflow-x: hidden;
   }
   
+  /* Carousel Header Styles */
+  .carousel-header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: 1;
+  }
+  
+  .carousel-slide.active {
+    opacity: 1;
+  }
+  
+  .carousel-fallback {
+    background: linear-gradient(135deg, #071A2F 0%, #1E3A8A 50%, #3B82F6 100%);
+    filter: none;
+  }
+  
+  .carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 26, 47, 0.4); /* Semi-transparent overlay */
+    z-index: 2;
+  }
+  
+  .carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+    width: 90%;
+    max-width: 800px;
+  }
+  
   .header {
     background-color: #071A2F;
   }
   
   .title {
-    color: #60A5FA; /* Tailwind's blue-400 */
-    text-shadow: 0 0 15px rgba(59, 130, 246, 0.25); /* Tailwind's drop-shadow */
+    color: #ffffff; /* White text */
+    text-shadow: 
+      /* Thinner dark blue outline */
+      -1px -1px 0 #1E3A8A,
+      1px -1px 0 #1E3A8A,
+      -1px 1px 0 #1E3A8A,
+      1px 1px 0 #1E3A8A,
+      -1px 0 0 #1E3A8A,
+      1px 0 0 #1E3A8A,
+      0 -1px 0 #1E3A8A,
+      0 1px 0 #1E3A8A;
   }
   
   .subtitle {
-    color: #93C5FD; /* Tailwind's blue-300 */
+    color: #ffffff; /* White text */
+    text-shadow: 
+      /* Very thin dark blue outline for readability */
+      -0.5px -0.5px 0 #1E3A8A,
+      0.5px -0.5px 0 #1E3A8A,
+      -0.5px 0.5px 0 #1E3A8A,
+      0.5px 0.5px 0 #1E3A8A,
+      -0.5px 0 0 #1E3A8A,
+      0.5px 0 0 #1E3A8A,
+      0 -0.5px 0 #1E3A8A,
+      0 0.5px 0 #1E3A8A;
   }
   
   .gradient-bar {
@@ -50,7 +128,8 @@
 }
 
 .transparent-nav nav {
-    background-color: transparent !important;
-    backdrop-filter: blur(5px);
+    background-color: rgba(7, 26, 47, 0.1) !important;
+    backdrop-filter: blur(10px);
     box-shadow: none !important;
+    border-bottom: 1px solid rgba(96, 165, 250, 0.2);
 }

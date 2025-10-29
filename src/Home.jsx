@@ -1,34 +1,72 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar';
 import './Home.css';
 
 function Home() {
+  const [carouselImages, setCarouselImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    // Dynamically import all images from the carousel directory
+    const loadCarouselImages = async () => {
+      try {
+        // Use Vite's glob import to get all jpg files
+        const imageModules = import.meta.glob('/src/media/images/landing/carousel/*.{jpg,jpeg,png,webp}', { 
+          eager: true, 
+          as: 'url' 
+        });
+        
+        const imagePaths = Object.keys(imageModules).map(path => imageModules[path]);
+        setCarouselImages(imagePaths);
+      } catch (error) {
+        console.log('No carousel images found, using fallback');
+        setCarouselImages([]);
+      }
+    };
+
+    loadCarouselImages();
+  }, []);
+
+  useEffect(() => {
+    // Only start the carousel if there are images
+    if (carouselImages.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => 
+          (prevIndex + 1) % carouselImages.length
+        );
+      }, 5000); // Change image every 5 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, [carouselImages.length]);
+
   return (
     <>
     <NavBar />
     <div className="page-container">
       
-      <header className="header">
-        <div className="container mx-auto px-6 md:px-10 py-20 md:py-28">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl md:text-7xl font-extrabold leading-tight title">
-                Eta Kappa Nu
-              </h1>
-              <p className="mt-6 text-xl md:text-2xl subtitle">
-                Engineering honors society at UCSD
-              </p>
-
-              <div className="mt-10 gradient-bar gradient-bar-md"></div>
-            </div>
-
-            <div className="md:justify-self-end">
-              <img
-                src="/src/media/images/group.jpg"
-                alt="HKN group"
-                className="image"
+      {/* Full-screen Carousel Header */}
+      <header className="carousel-header">
+        <div className="carousel-container">
+          {carouselImages.length > 0 ? (
+            carouselImages.map((image, index) => (
+              <div
+                key={index}
+                className={`carousel-slide ${index === currentImageIndex ? 'active' : ''}`}
+                style={{ backgroundImage: `url(${image})` }}
               />
-            </div>
+            ))
+          ) : (
+            <div className="carousel-slide active carousel-fallback" />
+          )}
+          <div className="carousel-overlay" />
+          <div className="carousel-content">
+            <h1 className="text-6xl md:text-8xl font-extrabold leading-tight title">
+              Eta Kappa Nu
+            </h1>
+            <p className="mt-6 text-3xl md:text-4xl subtitle">
+              Engineering honors society at UCSD
+            </p>
           </div>
         </div>
       </header>

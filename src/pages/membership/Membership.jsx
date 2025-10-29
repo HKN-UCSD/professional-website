@@ -86,65 +86,59 @@ function Membership() {
                 Steps 1-4 of these must be completed by the Friday night prior to the HKN Induction Ceremony, in order for the student to be officially invited to participate in the HKN Induction Ceremony.
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-blue-400 mb-4">Excellence</h3>
-                <div className="gradient-bar mx-auto mb-4" style={{
-                  height: '0.25rem',
-                  width: '9rem',
-                  background: 'linear-gradient(to right, #3B82F6, #6366F1)',
-                  borderRadius: '9999px'
-                }}></div>
-                <p className="text-blue-200/90">
-                  Join a community of high-achieving students who are committed to academic excellence 
-                  and professional growth in engineering and computer science.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-blue-400 mb-4">Network</h3>
-                <div className="gradient-bar mx-auto mb-4" style={{
-                  height: '0.25rem',
-                  width: '9rem',
-                  background: 'linear-gradient(to right, #3B82F6, #6366F1)',
-                  borderRadius: '9999px'
-                }}></div>
-                <p className="text-blue-200/90">
-                  Build meaningful connections with peers, alumni, and industry professionals 
-                  that will support your career throughout your engineering journey.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-blue-400 mb-4">Growth</h3>
-                <div className="gradient-bar mx-auto mb-4" style={{
-                  height: '0.25rem',
-                  width: '9rem',
-                  background: 'linear-gradient(to right, #3B82F6, #6366F1)',
-                  borderRadius: '9999px'
-                }}></div>
-                <p className="text-blue-200/90">
-                  Develop leadership skills, gain hands-on experience, and participate in 
-                  exclusive workshops and events designed to advance your technical abilities.
-                </p>
-              </div>
-            </div>
-            <div className="w-full h-0.5 bg-blue-400 mt-8"></div>
-          </section>
 
-          <section className="max-w-6xl mx-auto mt-16">
             <div className="flex items-center justify-center mb-8">
               <div className="flex-1 h-0.5 bg-blue-400"></div>
-              <h2 className="text-3xl font-bold text-blue-400 mx-8">How to Apply</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mx-8">Point Requirements</h2>
               <div className="flex-1 h-0.5 bg-blue-400"></div>
             </div>
-            <div className="max-w-4xl text-center mx-auto">
-              <p className="text-lg text-blue-200/90">
-                Membership applications open each quarter. Stay tuned for application details 
-                and requirements. Visit our portal or contact us for more information about 
-                the application process and upcoming recruitment events.
-              </p>
+            
+            {/* Interactive Progress Bar */}
+            <div className="flex w-full h-12 rounded-lg overflow-hidden mb-16 shadow-lg">
+              <div 
+                className="bg-blue-300 hover:bg-blue-200 cursor-pointer transition-colors duration-200 flex items-center justify-center text-blue-900 font-semibold"
+                style={{ flex: '3' }}
+                onClick={() => console.log('Section 1 clicked')}
+              >
+                General
+              </div>
+              <div 
+                className="bg-blue-400 hover:bg-blue-300 cursor-pointer transition-colors duration-200 flex items-center justify-center text-blue-900 font-semibold"
+                style={{ flex: '1' }}
+                onClick={() => console.log('Section 2 clicked')}
+              >
+                Professional
+              </div>
+              <div 
+                className="bg-blue-500 hover:bg-blue-400 cursor-pointer transition-colors duration-200 flex items-center justify-center text-white font-semibold"
+                style={{ flex: '1' }}
+                onClick={() => console.log('Section 3 clicked')}
+              >
+                Technical
+              </div>
+              <div 
+                className="bg-blue-600 hover:bg-blue-500 cursor-pointer transition-colors duration-200 flex items-center justify-center text-white font-semibold"
+                style={{ flex: '1' }}
+                onClick={() => console.log('Section 4 clicked')}
+              >
+                Mentorship
+              </div>
+              <div 
+                className="bg-blue-700 hover:bg-blue-600 cursor-pointer transition-colors duration-200 flex items-center justify-center text-blue-200 font-semibold"
+                style={{ flex: '2' }}
+                onClick={() => console.log('Section 5 clicked')}
+              >
+                Social
+              </div>
+              <div 
+                className="bg-blue-800 hover:bg-blue-700 cursor-pointer transition-colors duration-200 flex items-center justify-center text-blue-200 font-semibold"
+                style={{ flex: '2' }}
+                onClick={() => console.log('Section 6 clicked')}
+              >
+                Outreach
+              </div>
             </div>
+            
           </section>
         </main>
       </div>

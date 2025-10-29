@@ -53,13 +53,37 @@ function Membership() {
           <section className="max-w-6xl mx-auto">
             <div className="flex items-center justify-center mb-8">
               <div className="flex-1 h-0.5 bg-blue-400"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mx-8">Why Join HKN?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mx-8">Overview</h2>
               <div className="flex-1 h-0.5 bg-blue-400"></div>
             </div>
-            <div className="max-w-4xl text-center mx-auto mb-16">
-              <p className="text-lg text-blue-200/90">
-                Join Eta Kappa Nu and become part of UC San Diego's premier engineering honor society. 
-                Connect with top students, engage in meaningful projects, and build lasting professional relationships.
+            <div className="max-w-4xl mx-auto mb-16">
+              <p className="text-lg text-blue-200/90 mb-6 text-left">
+                To officially induct into Eta Kappa Nu (Kappa Psi) as a University Student, one must:
+              </p>
+              <ol className="text-lg text-blue-200/90 space-y-3 max-w-5xl pl-12">
+                <li className="flex items-start text-left">
+                  <span className="text-blue-400 font-bold mr-3 mt-0.5">1.</span>
+                  <span>Receive an Email Invitation distinguishing student above the GPA Cutoff of Eligible Major (depending on GPA)</span>
+                </li>
+                <li className="flex items-start text-left">
+                  <span className="text-blue-400 font-bold mr-3 mt-0.5">2.</span>
+                  <span>Begin your induction process by attending an Info Session and filling the Induction Start form (information in Email Invitation).</span>
+                </li>
+                <li className="flex items-start text-left">
+                  <span className="text-blue-400 font-bold mr-3 mt-0.5">3.</span>
+                  <span>Accumulate 10 HKN points, following the guidelines listed on this page.</span>
+                </li>
+                <li className="flex items-start text-left">
+                  <span className="text-blue-400 font-bold mr-3 mt-0.5">4.</span>
+                  <span>Pass a ~45 minute long Formal Interview near the end of the induction cycle.</span>
+                </li>
+                <li className="flex items-start text-left">
+                  <span className="text-blue-400 font-bold mr-3 mt-0.5">5.</span>
+                  <span>Attend the mandatory HKN Induction Ceremony, and pay the one-time $110 membership fee.</span>
+                </li>
+              </ol>
+              <p className="text-lg text-blue-200/90 mt-6 font-semibold text-center">
+                Steps 1-4 of these must be completed by the Friday night prior to the HKN Induction Ceremony, in order for the student to be officially invited to participate in the HKN Induction Ceremony.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">

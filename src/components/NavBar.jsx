@@ -31,6 +31,14 @@ function NavBar() {
               About
             </Link>
             <Link
+              to="/membership"
+              className={`${
+                location.pathname === '/membership' ? '[color:#5F69A6]' : textColorClass
+              } ${hoverColorClass}`}
+            >
+              Membership
+            </Link>
+            <Link
               to="/career-fair"
               className={`${
                 location.pathname === '/career-fair' ? '[color:#A3D7E5]' : textColorClass

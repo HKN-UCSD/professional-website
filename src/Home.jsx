@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from './components/NavBar';
 import './Home.css';
+
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+
+import CarouselSection from './components/CarouselComponent';
+import StatisticsSection from './components/StatisticsComponent';
+
 import socialImg from './media/images/landing/socials.jpg';
 import technicalImg from './media/images/landing/technical.jpg';
 import professionalImg from './media/images/landing/professional.jpg';

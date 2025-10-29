@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBar from '../../components/NavBar';
 import heroImage from '../../media/images/membership/group1.jpg';
 
 function Membership() {
+  const [activeTab, setActiveTab] = useState(null);
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(activeTab === tabName ? null : tabName);
+  };
   return (
     <>
       <NavBar />
@@ -94,48 +99,138 @@ function Membership() {
             </div>
             
             {/* Interactive Progress Bar */}
-            <div className="flex w-full h-12 rounded-lg overflow-hidden mb-16 shadow-lg">
+            <div className="flex w-full h-12 rounded-t-lg overflow-hidden shadow-lg">
               <div 
-                className="bg-blue-300 hover:bg-blue-200 cursor-pointer transition-colors duration-200 flex items-center justify-center text-blue-900 font-semibold"
-                style={{ flex: '3' }}
-                onClick={() => console.log('Section 1 clicked')}
+                className="cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold hover:brightness-110 flex-1 sm:flex-[3]"
+                style={{ backgroundColor: '#033f63' }}
+                onClick={() => handleTabClick('general')}
               >
-                General
+                <span className="hidden sm:inline">General</span>
+                <span className="sm:hidden">Gen.</span>
               </div>
               <div 
-                className="bg-blue-400 hover:bg-blue-300 cursor-pointer transition-colors duration-200 flex items-center justify-center text-blue-900 font-semibold"
-                style={{ flex: '1' }}
-                onClick={() => console.log('Section 2 clicked')}
+                className="cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold hover:brightness-110 flex-1 sm:flex-[1]"
+                style={{ backgroundColor: '#1a4f66' }}
+                onClick={() => handleTabClick('professional')}
               >
-                Professional
+                <span className="hidden sm:inline">Professional</span>
+                <span className="sm:hidden">Prof.</span>
               </div>
               <div 
-                className="bg-blue-500 hover:bg-blue-400 cursor-pointer transition-colors duration-200 flex items-center justify-center text-white font-semibold"
-                style={{ flex: '1' }}
-                onClick={() => console.log('Section 3 clicked')}
+                className="cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold hover:brightness-110 flex-1 sm:flex-[1]"
+                style={{ backgroundColor: '#3a7078' }}
+                onClick={() => handleTabClick('technical')}
               >
-                Technical
+                <span className="hidden sm:inline">Technical</span>
+                <span className="sm:hidden">Tech.</span>
               </div>
               <div 
-                className="bg-blue-600 hover:bg-blue-500 cursor-pointer transition-colors duration-200 flex items-center justify-center text-white font-semibold"
-                style={{ flex: '1' }}
-                onClick={() => console.log('Section 4 clicked')}
+                className="cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold hover:brightness-110 flex-1 sm:flex-[1]"
+                style={{ backgroundColor: '#7c9885' }}
+                onClick={() => handleTabClick('mentorship')}
               >
-                Mentorship
+                <span className="hidden sm:inline">Mentorship</span>
+                <span className="sm:hidden">Ment.</span>
               </div>
               <div 
-                className="bg-blue-700 hover:bg-blue-600 cursor-pointer transition-colors duration-200 flex items-center justify-center text-blue-200 font-semibold"
-                style={{ flex: '2' }}
-                onClick={() => console.log('Section 5 clicked')}
+                className="cursor-pointer transition-all duration-200 flex items-center justify-center text-gray-800 font-semibold hover:brightness-110 flex-1 sm:flex-[2]"
+                style={{ backgroundColor: '#b5b682' }}
+                onClick={() => handleTabClick('social')}
               >
-                Social
+                <span className="hidden sm:inline">Social</span>
+                <span className="sm:hidden">Social</span>
               </div>
               <div 
-                className="bg-blue-800 hover:bg-blue-700 cursor-pointer transition-colors duration-200 flex items-center justify-center text-blue-200 font-semibold"
-                style={{ flex: '2' }}
-                onClick={() => console.log('Section 6 clicked')}
+                className="cursor-pointer transition-all duration-200 flex items-center justify-center text-gray-800 font-semibold hover:brightness-110 flex-1 sm:flex-[2]"
+                style={{ backgroundColor: '#fedc97' }}
+                onClick={() => handleTabClick('outreach')}
               >
-                Outreach
+                <span className="hidden sm:inline">Outreach</span>
+                <span className="sm:hidden">Outr.</span>
+              </div>
+            </div>
+            
+            {/* Single Expandable Content Section - Seamlessly connected */}
+            <div className="relative">
+              {/* General Tab Content */}
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                activeTab === 'general' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <div className="bg-blue-900/30 rounded-b-lg p-6 border border-blue-400/20 border-t-0 shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-4">General (3)</h3>
+                  <p className="text-blue-200/90 text-lg">
+                    General Points can be fulfilled with an event of any category!
+                  </p>
+                </div>
+              </div>
+
+              {/* Professional Tab Content */}
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out absolute top-0 w-full ${
+                activeTab === 'professional' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <div className="bg-blue-900/30 rounded-b-lg p-6 border border-blue-400/20 border-t-0 shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-4">Professional Development Workshop (1)</h3>
+                  <p className="text-blue-200/90 text-lg">
+                    Example Professional Development Workshops include Resume Workshops, Interview Workshops, Elevator Pitch Workshops, and Problem Solving Sessions.
+                  </p>
+                </div>
+              </div>
+
+              {/* Technical Tab Content */}
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out absolute top-0 w-full ${
+                activeTab === 'technical' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <div className="bg-blue-900/30 rounded-b-lg p-6 border border-blue-400/20 border-t-0 shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-4">Technical Event (1)</h3>
+                  <p className="text-blue-200/90 text-lg">
+                    Example Technical Events include hands-on workshops, intros to programming languages, and tech talks.
+                  </p>
+                </div>
+              </div>
+
+              {/* Mentorship Tab Content */}
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out absolute top-0 w-full ${
+                activeTab === 'mentorship' ? 'max-h-52 opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <div className="bg-blue-900/30 rounded-b-lg p-6 border border-blue-400/20 border-t-0 shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-4">Mentorship (1)</h3>
+                  <p className="text-blue-200/90 text-lg mb-3">
+                    Get to know a current HKN officer to discuss the student leader experience and ask for academic or professional advice.
+                  </p>
+                  <p className="text-blue-200/90 text-base">
+                    Two chats are required to get this point (0.5 points each)
+                  </p>
+                </div>
+              </div>
+
+              {/* Social Tab Content */}
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out absolute top-0 w-full ${
+                activeTab === 'social' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <div className="bg-blue-900/30 rounded-b-lg p-6 border border-blue-400/20 border-t-0 shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-4">Social Events (2)</h3>
+                  <p className="text-blue-200/90 text-lg">
+                    Enjoy yourself with food/activities and meet current members, officers, and fellow inductees!
+                  </p>
+                </div>
+              </div>
+
+              {/* Outreach Tab Content */}
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out absolute top-0 w-full ${
+                activeTab === 'outreach' ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <div className="bg-blue-900/30 rounded-b-lg p-6 border border-blue-400/20 border-t-0 shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-4">Outreach Event (2)</h3>
+                  <p className="text-blue-200/90 text-lg mb-3">
+                    Assist our Outreach team in either instructing K-12 students or helping out during our on campus Outreach events.
+                  </p>
+                  <p className="text-blue-200/90 text-base mb-2">
+                    To participate in outreach events, you are required to attend one of the Outreach Skill Development Workshops (see calendar or ask VP Outreach)
+                  </p>
+                  <p className="text-blue-200/90 text-base">
+                    If you cannot attend any of our outreach events but have completed all other induction requirements prior to the induction ceremony, you may attend a future induction ceremony after fulfilling the outreach requirement.
+                  </p>
+                </div>
               </div>
             </div>
             

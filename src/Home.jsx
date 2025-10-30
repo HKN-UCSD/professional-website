@@ -109,7 +109,7 @@ function Home() {
 >
   <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
     {/* Front Side */}
-    <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
+    <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
       <h3 className="text-2xl font-bold text-blue-400 mb-4">Professional</h3>
       <div className="gradient-bar mx-auto mb-4" />
       <img
@@ -120,7 +120,7 @@ function Home() {
     </div>
 
     {/* Back Side */}
-    <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
+    <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
       <h3 className="text-2xl font-bold text-blue-400 mb-4">Professional</h3>
       <div className="gradient-bar mx-auto mb-4" />
       <p className="text-blue-200/90">
@@ -140,7 +140,7 @@ function Home() {
                 >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
                   {/* Front Side */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
+                  <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">Social</h3>
                     <div className="gradient-bar mx-auto mb-4" />                   
                     <img
@@ -151,7 +151,7 @@ function Home() {
                 </div>
 
                 {/* Back Side */}
-                <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
+                <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
     
                         <h3 className="text-2xl font-bold text-blue-400 mb-4">Social</h3>
 
@@ -174,7 +174,7 @@ function Home() {
 >
   <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
     {/* Front Side */}
-    <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
+    <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
       <h3 className="text-2xl font-bold text-blue-400 mb-4">Technical</h3>
       <div className="gradient-bar mx-auto mb-4" />
       <img
@@ -185,7 +185,7 @@ function Home() {
     </div>
 
     {/* Back Side */}
-    <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
+    <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
       <h3 className="text-2xl font-bold text-blue-400 mb-4">Technical</h3>
       <div className="gradient-bar mx-auto mb-4" />
       <p className="text-blue-200/90">

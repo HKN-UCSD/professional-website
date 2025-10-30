@@ -84,25 +84,6 @@ body {
     }
 }
 
-/* Typewriter Animation */
-@keyframes typewriter {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blinkCursor {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: var(--glow-color);
-    }
-}
-
 /* Sponsor Logo Twinkling Animations */
 
 /* Twinkling Idle Animations */
@@ -342,29 +323,16 @@ body {
     font-size: max(15px, min(1.35vw, 2.6vh));
 }
 
-/* Typewriter span for animated words */
-.about-text .typewriter-text {
-    border-right: 2px solid var(--glow-color);
+/* Fade-In on Scroll for About section */
+.about-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 
-/* Triggered when in view */
-.about-text.typing .typewriter-text {
-    animation: blinkCursor 0.5s infinite;
-}
-
-.about-text.typing-complete .typewriter-text {
-    border-right: none;
-}
-
-/* Triggered when in view */
-.about-text.typing {
-    animation: blinkCursor 0.8s infinite;
-}
-
-.about-text.typing-complete {
-    width: 100%;
-    border-right: none;
-    white-space: normal;
+.about-text.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Sponsor section */

@@ -108,11 +108,22 @@ function Home() {
               <div className="flex-1 h-0.5 bg-blue-400"></div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="
+  grid grid-cols-1
+  sm:grid-cols-2
+  lg:grid-cols-3
+  gap-8
+  place-items-stretch
+  justify-items-center
+">
+
+
+
+
               {/* Professional Card */}
               <div
                 onClick={(e) => e.currentTarget.classList.toggle('is-flipped')}
-                className="relative w-[22rem] h-[26rem] mx-auto cursor-pointer perspective"
+                className="relative w-[20rem] h-[26rem] mx-auto cursor-pointer perspective"
               >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
                   {/* Front */}
@@ -124,7 +135,7 @@ function Home() {
                     <img
                       src={professionalImg}
                       alt="HKN Professional Event"
-                      className="w-[20rem] h-[25rem] object-cover rounded-md mb-4"
+                      className="w-[18rem] h-[25rem] object-cover rounded-md mb-4"
                     />
                   </div>
 
@@ -133,7 +144,7 @@ function Home() {
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Professional
                     </h3>
-                    <div className="gradient-bar mx-auto mb-4" />
+                    
                     <p className="text-blue-200/90">
                       HKN’s professional workshops help you level up your career
                       through engaging, hands-on events like professor talks,
@@ -150,7 +161,7 @@ function Home() {
               {/* Social Card */}
               <div
                 onClick={(e) => e.currentTarget.classList.toggle('is-flipped')}
-                className="relative w-[22rem] h-[26rem] mx-auto cursor-pointer perspective"
+                className="relative w-[20rem] h-[26rem] mx-auto cursor-pointer perspective"
               >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
                   {/* Front */}
@@ -162,7 +173,7 @@ function Home() {
                     <img
                       src={socialImg}
                       alt="HKN Social Event"
-                      className="w-[20rem] h-[25rem] object-cover rounded-md mb-4"
+                      className="w-[18rem] h-[25rem] object-cover rounded-md mb-4"
                     />
                   </div>
 
@@ -171,7 +182,7 @@ function Home() {
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Social
                     </h3>
-                    <div className="gradient-bar mx-auto mb-4" />
+                   
                     <p className="text-blue-200/90">
                       HKN socials bring engineers together to relax, connect, and
                       have fun. From ice skating and boba socials to trivia
@@ -188,7 +199,7 @@ function Home() {
               {/* Technical Card */}
               <div
                 onClick={(e) => e.currentTarget.classList.toggle('is-flipped')}
-                className="relative w-[22rem] h-[26rem] mx-auto cursor-pointer perspective"
+                className="relative w-[20rem] h-[26rem] mx-auto cursor-pointer perspective"
               >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
                   {/* Front */}
@@ -200,7 +211,7 @@ function Home() {
                     <img
                       src={technicalImg}
                       alt="HKN Technical Workshop"
-                      className="w-[20rem] h-[25rem] object-cover rounded-md mb-4 overflow-hidden"
+                      className="w-[18rem] h-[25rem] object-cover rounded-md mb-4 overflow-hidden"
                     />
                   </div>
 
@@ -209,7 +220,7 @@ function Home() {
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Technical
                     </h3>
-                    <div className="gradient-bar mx-auto mb-4" />
+                    
                     <p className="text-blue-200/90">
                       HKN Technical Events offer hands-on workshops that teach
                       you new skills from the ground up with no prior experience

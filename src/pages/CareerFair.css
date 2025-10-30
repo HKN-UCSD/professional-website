@@ -1,5 +1,6 @@
 :root {
-    --primary-font: "Book Antiqua";
+    --primary-font: "Book Antiqua", Georgia, serif;
+;
     --glow-color: #A3D7E5;
     --glow-small: drop-shadow(0 0 2px var(--glow-color)) drop-shadow(0 0 2px var(--glow-color));
     --glow-large: drop-shadow(0 0 3px var(--glow-color)) drop-shadow(0 0 3px var(--glow-color)) drop-shadow(0 0 6px var(--glow-color));

@@ -35,6 +35,4 @@
     transform: rotateY(180deg);
   }
   .is-flipped > div { transform: rotateY(180deg); }
-
-
 }

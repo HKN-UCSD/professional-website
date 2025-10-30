@@ -159,7 +159,7 @@ function CareerFair() {
         </div>
         <a
           id="apply-link"
-          href="https://forms.gle/JQUWEiCAMw28Bu8m6"
+          href="https://forms.gle/sA21kbKYBrTTXcaKA"
           className="rsvp-link"
           target="_blank"
           rel="noopener noreferrer"

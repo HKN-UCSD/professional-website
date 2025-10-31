@@ -69,7 +69,7 @@ function Home() {
                 Eta Kappa Nu
               </h1>
               <p className="mt-6 text-3xl md:text-4xl subtitle">
-                Engineering honors society at UCSD
+                Engineering Honors Society at UC San Diego
               </p>
             </div>
           </div>

@@ -148,7 +148,7 @@ function Home() {
                     <p className="text-blue-200/90">
                       HKN’s professional workshops help you level up your career
                       through engaging, hands-on events like professor talks,
-                      DEAPTHS seminars, career fairs, networking events, and mock
+                      ECE/CSE depths seminars, career fairs, networking events, and mock
                       interview workshops. Learn how to stand out with your
                       resume, interview with confidence, and connect directly
                       with industry professionals and researchers who share

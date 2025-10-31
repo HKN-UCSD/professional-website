@@ -254,6 +254,65 @@ function Membership() {
           <section className="max-w-6xl mx-auto mt-16">
             <div className="flex items-center justify-center mb-8">
               <div className="flex-1 h-0.5 bg-blue-400"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mx-8">GPA Cutoffs</h2>
+              <div className="flex-1 h-0.5 bg-blue-400"></div>
+            </div>
+            
+            <div className="max-w-4xl mx-auto mb-16">
+              <p className="text-lg text-blue-200/90 mb-8 text-center">
+                Students must meet the GPA cutoff based on their year standing to receive an invitation. See below for specific cutoffs.
+              </p>
+              
+              {/* GPA Cutoff Bars */}
+              <div className="grid grid-cols-3 gap-4 md:gap-6 mb-8">
+                {/* Sophomore Bar */}
+                <div className="text-center">
+                  <h3 className="text-lg md:text-xl font-bold text-blue-400 mb-2">Sophomore</h3>
+                  <p className="text-xs md:text-sm text-blue-200/90 mb-4">Top 1/5</p>
+                  <div className="relative w-16 md:w-24 h-48 mx-auto bg-gray-700 rounded-lg overflow-hidden border border-blue-400/30">
+                    <div 
+                      className="absolute top-0 w-full bg-blue-400 transition-all duration-1000 ease-out flex items-center justify-center"
+                      style={{ height: '20%' }}
+                    >
+                      <span className="text-white font-semibold text-xs md:text-sm">20%</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Junior Bar */}
+                <div className="text-center">
+                  <h3 className="text-lg md:text-xl font-bold text-blue-400 mb-2">Junior</h3>
+                  <p className="text-xs md:text-sm text-blue-200/90 mb-4">Top 1/4</p>
+                  <div className="relative w-16 md:w-24 h-48 mx-auto bg-gray-700 rounded-lg overflow-hidden border border-blue-400/30">
+                    <div 
+                      className="absolute top-0 w-full bg-blue-400 transition-all duration-1000 ease-out flex items-center justify-center"
+                      style={{ height: '25%' }}
+                    >
+                      <span className="text-white font-semibold text-xs md:text-sm">25%</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Senior/Grad Bar */}
+                <div className="text-center">
+                  <h3 className="text-lg md:text-xl font-bold text-blue-400 mb-2">Senior/Grad</h3>
+                  <p className="text-xs md:text-sm text-blue-200/90 mb-4">Top 1/3</p>
+                  <div className="relative w-16 md:w-24 h-48 mx-auto bg-gray-700 rounded-lg overflow-hidden border border-blue-400/30">
+                    <div 
+                      className="absolute top-0 w-full bg-blue-400 transition-all duration-1000 ease-out flex items-center justify-center"
+                      style={{ height: '33%' }}
+                    >
+                      <span className="text-white font-semibold text-xs md:text-sm">33%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="max-w-6xl mx-auto mt-16">
+            <div className="flex items-center justify-center mb-8">
+              <div className="flex-1 h-0.5 bg-blue-400"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mx-8">Interviews and Induction</h2>
               <div className="flex-1 h-0.5 bg-blue-400"></div>
             </div>

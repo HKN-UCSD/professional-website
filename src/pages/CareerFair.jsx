@@ -12,30 +12,19 @@ import arkusLogo from '../media/images/hcf/arkus-logo.webp';
 
 function CareerFair() {
   useEffect(() => {
-    // Typewriter effect for about text on scroll
+    // Fade-in effect for About section
     const aboutText = document.querySelector('.about-text');
-    
-    if (!aboutText) return;
-    
-    // Store original text and create flag to prevent re-triggering
-    const originalText = aboutText.textContent;
-    let hasTriggered = false;
-    
-    // Create intersection observer for about text
-    const aboutObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !hasTriggered) {
-          hasTriggered = true; // Set flag to prevent re-triggering
-          startTypewriter(entry.target, originalText);
-          aboutObserver.unobserve(entry.target); // Stop observing after first trigger
-        }
-      });
-    }, {
-      threshold: 0.3 // Trigger when 30% of element is visible
-    });
-    
-    // Start observing the about text
-    aboutObserver.observe(aboutText);
+    if (aboutText) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            aboutText.classList.add('visible');
+            observer.unobserve(aboutText); // Trigger once only
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(aboutText);
+    }
     
     // Organization logos twinkling (starts immediately)
     const orgLogos = document.querySelectorAll('.logo');
@@ -142,7 +131,6 @@ function CareerFair() {
     
     // Cleanup function
     return () => {
-      aboutObserver.disconnect();
       sponsorsObserver.disconnect();
     };
   }, []);
@@ -171,7 +159,7 @@ function CareerFair() {
         </div>
         <a
           id="apply-link"
-          href="https://forms.gle/JQUWEiCAMw28Bu8m6"
+          href="https://forms.gle/sA21kbKYBrTTXcaKA"
           className="rsvp-link"
           target="_blank"
           rel="noopener noreferrer"

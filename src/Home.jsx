@@ -127,7 +127,7 @@ function Home() {
               >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
                   {/* Front */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
+                  <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800/80 hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Professional
                     </h3>
@@ -137,10 +137,11 @@ function Home() {
                       alt="HKN Professional Event"
                       className="w-[18rem] h-[25rem] object-cover rounded-md mb-4"
                     />
+                    <span className="faq-click-hint">⟲</span>
                   </div>
 
                   {/* Back */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
+                  <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800/80 hover:bg-slate-800 active:bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Professional
                     </h3>
@@ -154,6 +155,7 @@ function Home() {
                       with industry professionals and researchers who share
                       real-world insights to help you reach your goals.
                     </p>
+                    <span className="faq-click-hint">⟲</span>
                   </div>
                 </div>
               </div>
@@ -165,7 +167,7 @@ function Home() {
               >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
                   {/* Front */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
+                  <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800/80 hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Social
                     </h3>
@@ -175,10 +177,11 @@ function Home() {
                       alt="HKN Social Event"
                       className="w-[18rem] h-[25rem] object-cover rounded-md mb-4"
                     />
+                    <span className="faq-click-hint">⟲</span>
                   </div>
 
                   {/* Back */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
+                  <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800/80 hover:bg-slate-800 active:bg-slate-800 text-white text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Social
                     </h3>
@@ -192,6 +195,7 @@ function Home() {
                       genuine connections with peers who share your passion for
                       work and play.
                     </p>
+                    <span className="faq-click-hint">⟲</span>
                   </div>
                 </div>
               </div>
@@ -203,7 +207,7 @@ function Home() {
               >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d rounded-2xl">
                   {/* Front */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
+                  <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800/80 hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl backface-hidden p-6">
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Technical
                     </h3>
@@ -213,10 +217,11 @@ function Home() {
                       alt="HKN Technical Workshop"
                       className="w-[18rem] h-[25rem] object-cover rounded-md mb-4 overflow-hidden"
                     />
+                    <span className="faq-click-hint">⟲</span>
                   </div>
 
                   {/* Back */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-start hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
+                  <div className="absolute inset-0 flex flex-col items-center justify-start bg-slate-800/80 hover:bg-slate-800 active:bg-slate-800 text-center rounded-2xl shadow-xl rotate-y-180 backface-hidden p-6">
                     <h3 className="text-2xl font-bold text-blue-400 mb-4">
                       Technical
                     </h3>
@@ -231,9 +236,16 @@ function Home() {
                       real experience in a supportive environment where curiosity
                       meets innovation.
                     </p>
+                    <span className="faq-click-hint">⟲</span>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="text-center mt-8 mb-4">
+              <p className="text-lg text-blue-200/90">
+                Currently scheduled events can be found on the HKN Calendar and HKN Portal
+              </p>
             </div>
 
             <div className="w-full h-0.5 bg-blue-400 mt-8"></div>

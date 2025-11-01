@@ -244,7 +244,24 @@ function Home() {
 
             <div className="text-center mt-8 mb-4">
               <p className="text-lg text-blue-200/90">
-                Currently scheduled events can be found on the HKN Calendar and HKN Portal
+                Currently scheduled events can be found on the{' '}
+                <a 
+                  href="https://calendar.google.com/calendar/embed?src=v90k4miuerv8iemlu0c3gaq968%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 underline"
+                >
+                  HKN Calendar
+                </a>
+                {' '}and{' '}
+                <a 
+                  href="https://portal.hknucsd.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 underline"
+                >
+                  HKN Portal
+                </a>
               </p>
             </div>
 

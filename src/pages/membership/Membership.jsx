@@ -116,52 +116,52 @@ function Membership() {
             {/* Interactive Progress Bar */}
             <div className="flex w-full h-12 rounded-t-lg overflow-hidden shadow-lg">
               <div 
-                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold ${activeTab !== 'general' ? 'hover:brightness-110' : ''} flex-1 sm:flex-[3]`}
+                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold ${activeTab !== 'general' ? 'hover:brightness-110' : ''} flex-1`}
                 style={{ backgroundColor: '#033f63' }}
                 onClick={() => handleTabClick('general')}
               >
-                <span className="hidden sm:inline">General</span>
-                <span className="sm:hidden">Gen.</span>
+                <span className="hidden lg:inline">General</span>
+                <span className="lg:hidden">Gen.</span>
               </div>
               <div 
-                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold ${activeTab !== 'professional' ? 'hover:brightness-110' : ''} flex-1 sm:flex-[1]`}
+                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold ${activeTab !== 'professional' ? 'hover:brightness-110' : ''} flex-1`}
                 style={{ backgroundColor: '#1a4f66' }}
                 onClick={() => handleTabClick('professional')}
               >
-                <span className="hidden sm:inline">Professional</span>
-                <span className="sm:hidden">Prof.</span>
+                <span className="hidden lg:inline">Professional</span>
+                <span className="lg:hidden">Prof.</span>
               </div>
               <div 
-                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold ${activeTab !== 'technical' ? 'hover:brightness-110' : ''} flex-1 sm:flex-[1]`}
+                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold ${activeTab !== 'technical' ? 'hover:brightness-110' : ''} flex-1`}
                 style={{ backgroundColor: '#3a7078' }}
                 onClick={() => handleTabClick('technical')}
               >
-                <span className="hidden sm:inline">Technical</span>
-                <span className="sm:hidden">Tech.</span>
+                <span className="hidden lg:inline">Technical</span>
+                <span className="lg:hidden">Tech.</span>
               </div>
               <div 
-                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold ${activeTab !== 'mentorship' ? 'hover:brightness-110' : ''} flex-1 sm:flex-[1]`}
+                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-white font-semibold ${activeTab !== 'mentorship' ? 'hover:brightness-110' : ''} flex-1`}
                 style={{ backgroundColor: '#7c9885' }}
                 onClick={() => handleTabClick('mentorship')}
               >
-                <span className="hidden sm:inline">Mentorship</span>
-                <span className="sm:hidden">Ment.</span>
+                <span className="hidden lg:inline">Mentorship</span>
+                <span className="lg:hidden">Ment.</span>
               </div>
               <div 
-                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-gray-800 font-semibold ${activeTab !== 'social' ? 'hover:brightness-110' : ''} flex-1 sm:flex-[2]`}
+                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-gray-800 font-semibold ${activeTab !== 'social' ? 'hover:brightness-110' : ''} flex-1`}
                 style={{ backgroundColor: '#b5b682' }}
                 onClick={() => handleTabClick('social')}
               >
-                <span className="hidden sm:inline">Social</span>
-                <span className="sm:hidden">Social</span>
+                <span className="hidden lg:inline">Social</span>
+                <span className="lg:hidden">Social</span>
               </div>
               <div 
-                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-gray-800 font-semibold ${activeTab !== 'outreach' ? 'hover:brightness-110' : ''} flex-1 sm:flex-[2]`}
+                className={`cursor-pointer transition-all duration-200 flex items-center justify-center text-gray-800 font-semibold ${activeTab !== 'outreach' ? 'hover:brightness-110' : ''} flex-1`}
                 style={{ backgroundColor: '#fedc97' }}
                 onClick={() => handleTabClick('outreach')}
               >
-                <span className="hidden sm:inline">Outreach</span>
-                <span className="sm:hidden">Outr.</span>
+                <span className="hidden lg:inline">Outreach</span>
+                <span className="lg:hidden">Outr.</span>
               </div>
             </div>
             

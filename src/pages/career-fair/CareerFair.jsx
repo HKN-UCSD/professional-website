@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
-import NavBar from '../components/NavBar';
+import NavBar from '../../components/NavBar';
 import './CareerFair.css';
-import hcfBanner from '../media/images/hcf/hcf-banner-backgroundless.png';
-import hknLogo from '../media/images/hcf/hkn-logo.png';
-import tbpLogo from '../media/images/hcf/tbp-logo.png';
-import scholarsLogo from '../media/images/hcf/scholars-logo.png';
-import llnlLogo from '../media/images/hcf/llnl-logo.png';
-import viasatLogo from '../media/images/hcf/viasat-logo.png';
-import interlinkLogo from '../media/images/hcf/interlink-logo.webp';
-import arkusLogo from '../media/images/hcf/arkus-logo.webp';
+import hcfBanner from '../../media/images/hcf/hcf-banner-backgroundless.png';
+import hknLogo from '../../media/images/hcf/hkn-logo.png';
+import tbpLogo from '../../media/images/hcf/tbp-logo.png';
+import scholarsLogo from '../../media/images/hcf/scholars-logo.png';
+import llnlLogo from '../../media/images/hcf/llnl-logo.png';
+import viasatLogo from '../../media/images/hcf/viasat-logo.png';
+import interlinkLogo from '../../media/images/hcf/interlink-logo.webp';
+import arkusLogo from '../../media/images/hcf/arkus-logo.webp';
 
 function CareerFair() {
   useEffect(() => {

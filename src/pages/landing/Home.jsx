@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from './components/NavBar';
+import NavBar from '../../components/NavBar';
 import './Home.css';
-import socialImg from './media/images/landing/socials.jpg';
-import technicalImg from './media/images/landing/technical.jpg';
-import professionalImg from './media/images/landing/professional.jpg';
+import socialImg from '../../media/images/landing/socials.jpg';
+import technicalImg from '../../media/images/landing/technical.jpg';
+import professionalImg from '../../media/images/landing/professional.jpg';
 
 function Home() {
   const [carouselImages, setCarouselImages] = useState([]);
@@ -146,7 +146,7 @@ function Home() {
                     </h3>
                     
                     <p className="text-blue-200/90">
-                      HKN’s professional workshops help you level up your career
+                      HKN's professional workshops help you level up your career
                       through engaging, hands-on events like professor talks,
                       DEPTHS seminars, career fairs, networking events, and mock
                       interview workshops. Learn how to stand out with your
@@ -187,7 +187,7 @@ function Home() {
                       HKN socials bring engineers together to relax, connect, and
                       have fun. From ice skating and boba socials to trivia
                       nights, these events are the perfect mix of friendship and
-                      networking. Whether you’re meeting new people or unwinding
+                      networking. Whether you're meeting new people or unwinding
                       after a long week, HKN socials create lasting memories and
                       genuine connections with peers who share your passion for
                       work and play.
@@ -224,7 +224,7 @@ function Home() {
                     <p className="text-blue-200/90">
                       HKN Technical Events offer hands-on workshops that teach
                       you new skills from the ground up with no prior experience
-                      needed. Whether you’re curious about computer vision,
+                      needed. Whether you're curious about computer vision,
                       health sensors, or 3D printing, our events are open to all
                       majors and designed to help you explore new engineering
                       fields. Learn practical skills, build projects, and gain

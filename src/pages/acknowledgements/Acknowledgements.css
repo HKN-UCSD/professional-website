@@ -1,0 +1,9 @@
+.carousel-item {
+  opacity: 0;
+  transition: opacity 1s linear, visibility 0.5s linear;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+}

@@ -3,7 +3,7 @@ import './Acknowledgements.css';
 import NavBar from '../../components/NavBar';
 import CarouselCard from './CarouselCard';
 import heroImage from '../../media/images/acknowledgements/acknowledgements_title.png';
-import eceLogo from '../../media/images/acknowledgements/logos/ece_logo.png';
+import eceLogo from '../../media/images/acknowledgements/logos/ece_logo.jpg';
 import digikeyLogo from '../../media/images/acknowledgements/logos/digi_key_logo.png';
 import monsterLogo from '../../media/images/acknowledgements/logos/monster.png';
 import qualcommLogo from '../../media/images/acknowledgements/logos/qualcomm.png';
@@ -22,7 +22,7 @@ function Acknowledgements() {
         <CarouselCard img={digikeyLogo} title="Digi-Key Electronics" content="Empowering engineers with components, tools, and resources for rapid prototyping and learning." />
         <CarouselCard img={qualcommLogo} title="Qualcomm" content="Driving innovation in wireless technologies and microcontroller development supporting future engineers through education initiatives." />
         <CarouselCard img={monsterLogo} title="Monster Energy" content="Fueling creativity, collaboration, and late-night builds." />
-        <CarouselCard img={ngcLogo} title="Northrop Grumman" content="Words." /></div>}
+        <CarouselCard img={ngcLogo} title="Northrop Grumman" content="Bridging academic innovation with mission-critical engineering." /></div>}
     ];
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -89,12 +89,12 @@ function Acknowledgements() {
                         </div>
                     </div>
 
-                    <div className="container pointer-events-none">
+                    <div className="container pointer-events-none relative overflow-hidden min-h-[400px]">
                         <div className="grid grid-cols-1 grid-rows-1">
                             {slides.map((slide, index) => (
                                 <div
                                 key={index}
-                                className={`carousel-item justify-center col-start-1 row-start-1 self-start mt-6 flex ${index === currentIndex ? 'active' : ''}`}
+                                className={`carousel-item justify-center col-start-1 row-start-1 self-start mt-6 flex ${index === currentIndex ? 'active relative' : 'inset-0 absolute'}`}
                                 >
                                 {slide.content}
                                 </div>

@@ -5,6 +5,7 @@ import App from './App.jsx'
 import CareerFair from './pages/CareerFair.jsx'
 import Sponsor from './pages/Sponsor.jsx'
 import Membership from './pages/membership/Membership.jsx'
+import Acknowledgements from './pages/acknowledgements/Acknowledgements.jsx'
 import Home from './Home.jsx'
 import './index.css'
 
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/career-fair" element={<CareerFair />} />
         <Route path="/sponsor" element={<Sponsor />} />
         <Route path="/membership" element={<Membership />} />
+        <Route path="/acknowledgements" element={<Acknowledgements />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,

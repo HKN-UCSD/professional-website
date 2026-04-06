@@ -53,6 +53,14 @@ function NavBar() {
             >
               Honors Career Fair
             </Link>
+            <Link
+              to="/acknowledgements"
+              className={`${
+                location.pathname === '/acknowledgements' ? '[color:#5F69A6]' : textColorClass
+              } ${hoverColorClass}`}
+            >
+              Acknowledgements
+            </Link>
             <a
               href="https://portal.hknucsd.com/"
               target="_blank"

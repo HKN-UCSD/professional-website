@@ -16,8 +16,8 @@ import rubinImage from '../../media/images/acknowledgements/portraits/rubin.jpg'
 
 function Acknowledgements() {
     const slides = [
-        { text: "Faculty", content: <div><CarouselCard img={morrisImage} title="Karcher Morris" content="Assistant Teaching Professor, Electrical and Computer Engineering" />
-        <CarouselCard img={rubinImage} title="Noah Rubin" content="Assistant Professor, Electrical and Computer Engineering" /></div>},
+        { text: "Faculty", content: <div><CarouselCard img={rubinImage} title="Noah Rubin" content="Assistant Professor, Electrical and Computer Engineering" />
+        <CarouselCard img={morrisImage} title="Karcher Morris" content="Assistant Teaching Professor, Electrical and Computer Engineering" /></div>},
         { text: "Organizations", content: <div><CarouselCard img={eceLogo} title="UCSD ECE Department" content="Supporting student innovation, technical excellence, and professional development within engineering." />
         <CarouselCard img={digikeyLogo} title="Digi-Key Electronics" content="Empowering engineers with components, tools, and resources for rapid prototyping and learning." />
         <CarouselCard img={qualcommLogo} title="Qualcomm" content="Driving innovation in wireless technologies and microcontroller development supporting future engineers through education initiatives." />

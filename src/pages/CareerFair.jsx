@@ -3,12 +3,7 @@ import NavBar from '../components/NavBar';
 import './CareerFair.css';
 import hcfBanner from '../media/images/hcf/hcf-banner-backgroundless.png';
 import hknLogo from '../media/images/hcf/hkn-logo.png';
-import tbpLogo from '../media/images/hcf/tbp-logo.png';
-import scholarsLogo from '../media/images/hcf/scholars-logo.png';
-import llnlLogo from '../media/images/hcf/llnl-logo.png';
-import viasatLogo from '../media/images/hcf/viasat-logo.png';
-import interlinkLogo from '../media/images/hcf/interlink-logo.webp';
-import arkusLogo from '../media/images/hcf/arkus-logo.webp';
+import hrllogo from '../media/images/hcf/hrl-logo.png';
 
 function CareerFair() {
   useEffect(() => {
@@ -149,7 +144,7 @@ function CareerFair() {
                 alt="HCF Banner"
               />
               <p id="eventdate" className="event-info">
-                November 10th, 2024, 1-5pm
+                November 9th, 2026, 2-5pm
               </p>
               <p id="eventlocation" className="event-info">
                 Qualcomm Room, Jacobs Hall
@@ -174,23 +169,13 @@ function CareerFair() {
         <p className="section-header">About</p>
         <hr className="section-divider" />
         <p className="about-text">
-          The Honors Career Fair (HCF) at UC San Diego is an annual, student-organized event for top honors engineering students with high GPAs and excellent academic records. This event is hosted by Eta Kappa Nu (HKN), inviting members of Tau Beta Pi, and UCSD Scholar's Society. This exclusive career fair allows recruiters to connect with a select group of high-achieving students in an intimate setting.
+          The Honors Career Fair (HCF) at UC San Diego is an annual, student-organized event for top honors engineering students with high GPAs and excellent academic records. This event is hosted by Eta Kappa Nu (HKN), inviting Jacobs School of Engineering students. This exclusive career fair allows recruiters to connect with a select group of high-achieving students in an intimate setting. The first half is for HKN members only, while the second half is open to all Jacobs School of Engineering students.
         </p>
         <div className="logo-container">
-          <img
-            src={scholarsLogo}
-            className="logo logo-base"
-            alt="Scholars Logo"
-          />
           <img
             src={hknLogo}
             className="logo logo-base"
             alt="HKN Logo"
-          />
-          <img
-            src={tbpLogo}
-            className="logo logo-base"
-            alt="TBP Logo"
           />
         </div>
       </div>
@@ -204,30 +189,13 @@ function CareerFair() {
           {/* Featured Money Sponsor */}
           <div className="featured-sponsor">
             <img
-              src={viasatLogo}
+              src={hrllogo}
               className="featured-sponsor-logo logo-base"
-              alt="Viasat Logo"
+              alt="HRL Logo"
             />
           </div>
           
           {/* Other Sponsors */}
-          <div className="sponsor-grid">
-            <img
-              src={llnlLogo}
-              className="sponsor-logo logo-base"
-              alt="Lawrence Livermore National Laboratory Logo"
-            />
-            <img
-              src={interlinkLogo}
-              className="sponsor-logo logo-base"
-              alt="Interlink Logo"
-            />
-            <img
-              src={arkusLogo}
-              className="sponsor-logo logo-base"
-              alt="Arkus Logo"
-            />
-          </div>
         </div>
       </div>
 

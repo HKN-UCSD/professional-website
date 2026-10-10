@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar';
 import './CareerFair.css';
 import hcfBanner from '../media/images/hcf/hcf-banner-backgroundless.png';
 import hknLogo from '../media/images/hcf/hkn-logo.png';
-import hrllogo from '../media/images/hcf/hrl-logo.png';
+import hrllogo from '../media/images/hcf/hrl-logo-new.png';
 
 function CareerFair() {
   useEffect(() => {
@@ -154,7 +154,7 @@ function CareerFair() {
         </div>
         <a
           id="apply-link"
-          href="https://forms.gle/sA21kbKYBrTTXcaKA"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfQjmszXSDLiXaB-QJ8RQ2TYwBPq4F6UsSX3tfSeTOoNfOAMQ/viewform"
           className="rsvp-link"
           target="_blank"
           rel="noopener noreferrer"

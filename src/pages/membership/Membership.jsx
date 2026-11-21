@@ -248,6 +248,9 @@ function Membership() {
                 </div>
               </div>
             </div>
+            <p className="text-lg text-blue-200/90 mt-8 text-center font-semibold">
+              Inductees are required to earn at least 6 points by the end of Week 9.
+            </p>
             
           </section>
 
